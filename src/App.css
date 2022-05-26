@@ -1,38 +1,86 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+@import url('https://fonts.googleapis.com/css?family=Meddon');
+@import url('https://fonts.googleapis.com/css?family=WindSong');
+@import url('https://fonts.googleapis.com/css?family=Babylonica');
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
+* {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  color: rgb(130, 30, 10);
+  background: rgb(210, 180, 140);
+}
+
+img {
+  user-select: none;
+  width: 90vw;
+  height: 4.5vw;
+}
+
+html {
+  background-image: url('paper-background.jpg');
+  /*background-color: rgb(250, 200, 150);*/
+}
+
+.App, input[type='text'], textarea, select {
   text-align: center;
+  font-family: 'Charmonman';
+  font-size: 2.5vw;
+  color: rgb(60, 30, 10);
+/*  color: rgb(30, 15, 5);
+*/}
+
+input[type='text']:focus, select:focus, textarea:focus {
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type='text'].notes, textarea.notes {
+  text-align: left;
+  width: 85%;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.short {
+  line-height: 0.4;
+}
+
+select {
+  text-align: left;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /*background-color: rgb(200, 150, 100);*/
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Windsong';
+  font-size: 6vw;
+  color: rgb(30, 15, 5);
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.column {
+  width: 50%;
+}
+
+.auto-expand {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  line-height: 1.4;
+  padding: 10px 16px;
+  resize: none;
 }
