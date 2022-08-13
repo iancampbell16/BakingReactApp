@@ -26,15 +26,20 @@ if (!currentBread) {
       }
     }
   }
-  // updates all the bakers notes from the breadlist.js
+  // updates all the ingredients, measurements, and bakers notes from the breadlist.js
   for (let i = 0; i < Object.keys(parsedBread).length; i++) {
+    parsedBread[Object.keys(parsedBread)[i]].ingredients = breadlistbase[Object.keys(parsedBread)[i]].ingredients;
+    parsedBread[Object.keys(parsedBread)[i]].measurements = breadlistbase[Object.keys(parsedBread)[i]].measurements;
     parsedBread[Object.keys(parsedBread)[i]].notes = breadlistbase[Object.keys(parsedBread)[i]].notes;
   }
   localStorage.setItem('breadlist', JSON.stringify(parsedBread))
 }
 
 const rawbreadlist = localStorage.getItem('breadlist');
-let breadlist = JSON.parse(rawbreadlist);
+let breadlist = {};
+for (key of JSON.parse(rawbreadlist)) {
+  breadlist[key] = JSON.parse(rawbreadlist)[key];
+}
 
 
 class IngredientItem extends React.Component {
