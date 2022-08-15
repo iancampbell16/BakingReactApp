@@ -2,7 +2,7 @@
 
 ## What the project does
 
-This project stores various recipes for making sourdough loaves. The amount of any of the ingredients (as well as the total flour and total weight) can be altered by the user and the amounts of the rest of the ingradients will change in order to preserve the relative ratios. There is also a section for individual user notes, which will be stored locally on your broswer (using localStorage) and will prersist through closing and opening of windows.
+This project stores various recipes for making sourdough loaves. The amount of any of the ingredients (as well as the total flour and total weight) can be altered by the user and the amounts of the rest of the ingradients will change in order to preserve the relative ratios. There is also a section for individual user notes, which will be stored locally on your broswer (using localStorage) and will prersist through closing and opening of windows. Changes made to the recipes in `breadlist.js` will update to individual user's site while maintaining their personal user notes as well as the addition and removal of recipes.
 
 ## How to use the project
 
